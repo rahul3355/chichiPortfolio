@@ -45,7 +45,7 @@ export default function FeaturedProjects() {
     {
       id: "utsav",
       title: "Utsav 2025 | Pagrav Dance Company",
-      type: "Cultural Marketing Campaign",
+      type: "Cultural Marketing Event",
       description: "20th Anniversary celebration strategy reaching 180k+ impressions across digital platforms",
       overview: "Led comprehensive marketing strategy for Pagrav Dance Company's milestone 20th anniversary Utsav festival, creating an integrated campaign that elevated brand visibility and drove unprecedented engagement across multiple channels.",
       actions: [
@@ -62,7 +62,7 @@ export default function FeaturedProjects() {
         { label: "Event Attendance", value: "Sold Out", icon: Award }
       ],
       tools: ["CapCut", "Canva", "Premiere Pro", "Google Analytics", "Instagram", "Facebook"],
-      color: "from-purple-500/10 to-pink-500/10",
+      color: "from-[#F2EAFF] via-[#DDBBFC] to-purple-100/40",
       images: [
         { src: utsavPoster, alt: "Utsav festival poster design" },
         { src: utsavPost, alt: "Social media post promoting Utsav" },
