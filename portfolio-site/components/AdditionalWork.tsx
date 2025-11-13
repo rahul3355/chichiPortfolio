@@ -2,8 +2,9 @@ import Image from "next/image"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { FileText, Image as ImageIcon } from "lucide-react"
+import { ArrowUpRight, FileText, Image as ImageIcon } from "lucide-react"
 
 import iccrBulgaria from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr bulgaria.jpg"
 import iccrRomania from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr romania.jpg"
@@ -63,19 +64,25 @@ export default function AdditionalWork() {
       title: "Utsav 2025 Press Release",
       type: "Press Release",
       description: "Official announcement for Pagrav Dance Company's 20th anniversary celebration",
-      excerpt: "Multi-platform campaign launch announcement distributed to 50+ cultural media outlets..."
+      excerpt: "Multi-platform campaign launch announcement distributed to 50+ cultural media outlets...",
+      href: "/press-releases/utsav-2025-press-release.pdf",
+      actionLabel: "Download Press Release"
     },
     {
       title: "TB Mukt Bharat Blog Series",
       type: "Blog Content",
       description: "Educational content series on tuberculosis prevention and awareness",
-      excerpt: "SEO-optimized articles combining public health information with compelling storytelling..."
+      excerpt: "SEO-optimized articles combining public health information with compelling storytelling...",
+      href: "/press-releases/tb-mukt-bharat-blog-series.pdf",
+      actionLabel: "Read Blog Sample"
     },
     {
       title: "Cultural Festival Newsletter",
       type: "Email Marketing",
       description: "Monthly newsletter to 3,000+ international stakeholders",
-      excerpt: "Engaging digest of cultural events, artist features, and program highlights..."
+      excerpt: "Engaging digest of cultural events, artist features, and program highlights...",
+      href: "/press-releases/cultural-festival-newsletter.pdf",
+      actionLabel: "Preview Newsletter"
     }
   ]
 
@@ -138,9 +145,14 @@ export default function AdditionalWork() {
                     <div className="bg-muted/50 p-3 rounded-md border-l-2 border-primary">
                       <p className="text-xs italic text-muted-foreground">{sample.excerpt}</p>
                     </div>
-                    <button className="text-sm text-primary hover:underline font-medium">
-                      View Full Sample →
-                    </button>
+                    {sample.href && (
+                      <Button asChild variant="link" className="h-auto p-0 text-primary">
+                        <a href={sample.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">
+                          {sample.actionLabel}
+                          <ArrowUpRight className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               ))}
