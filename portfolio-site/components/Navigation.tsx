@@ -46,7 +46,7 @@ export default function Navigation() {
             onClick={() => scrollToSection("#home")}
             className="text-xl font-bold hover:text-primary transition-colors"
           >
-            Portfolio
+            Swarnali Nag
           </button>
 
           {/* Desktop Navigation */}
