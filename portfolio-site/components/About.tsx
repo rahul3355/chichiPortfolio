@@ -10,10 +10,26 @@ import speakingEngagementPhoto from "@/assets/Swarnali Portfolio Assets/About me
 
 export default function About() {
   const timeline = [
-    { year: "2024", role: "Marketing Manager", org: "Pagrav Dance Company" },
-    { year: "2023", role: "Communications Coordinator", org: "University of Manchester" },
-    { year: "2021", role: "Marketing Executive", org: "The Visual House" },
-    { year: "2019", role: "Communications Officer", org: "ICCR" },
+    {
+      year: "2025",
+      role: "Marketing, Administration and Teaching Coordinator",
+      org: "Pagrav Dance Company"
+    },
+    {
+      year: "2024",
+      role: "Marketing and Communications Executive",
+      org: "University of Manchester"
+    },
+    {
+      year: "2023",
+      role: "Marketing and Communications Officer",
+      org: "The Visual House"
+    },
+    {
+      year: "2022",
+      role: "Culture and Media Intern",
+      org: "Indian Council of Cultural Relations"
+    }
   ]
 
   const aboutImages = [
@@ -93,7 +109,7 @@ export default function About() {
         {/* Career Timeline */}
         <div>
           <h3 className="text-2xl font-semibold mb-8 text-center">Career Journey</h3>
-          <Card>
+          <Card className="border border-[#E2D1FB] bg-[#F8F3FF]">
             <CardContent className="pt-6">
               <div className="grid md:grid-cols-4 gap-6">
                 {timeline.map((item, index) => (
