@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="flex flex-wrap justify-center gap-4 pt-4">
           <Button size="lg" className="gap-2" asChild>
             <a
-              href="/documents/Swarnali%20CV.pdf"
+              href="https://drive.google.com/file/d/101LVdTUP86AEs4-3Bdpf4uncxXAVCCJ9/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2"
