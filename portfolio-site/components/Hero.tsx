@@ -50,13 +50,25 @@ export default function Hero() {
               Download CV
             </a>
           </Button>
-          <Button size="lg" variant="outline" className="gap-2">
-            <Mail className="w-4 h-4" />
-            Email Me
+          <Button size="lg" variant="outline" className="gap-2" asChild>
+            <a
+              href="mailto:swarnalinag997@gmail.com"
+              className="inline-flex items-center gap-2"
+            >
+              <Mail className="w-4 h-4" />
+              Email Me
+            </a>
           </Button>
-          <Button size="lg" variant="outline" className="gap-2">
-            <Linkedin className="w-4 h-4" />
-            LinkedIn
+          <Button size="lg" variant="outline" className="gap-2" asChild>
+            <a
+              href="https://www.linkedin.com/in/swarnali-nag"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2"
+            >
+              <Linkedin className="w-4 h-4" />
+              LinkedIn
+            </a>
           </Button>
         </div>
       </div>
