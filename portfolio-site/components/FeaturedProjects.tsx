@@ -1,10 +1,44 @@
 "use client"
 
+import Image from "next/image"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TrendingUp, Users, Target, Award } from "lucide-react"
+
+import utsavPoster from "@/assets/Swarnali Portfolio Assets/Project 1 - Utsav/utsav poster.png"
+import utsavPost from "@/assets/Swarnali Portfolio Assets/Project 1 - Utsav/PDC post 1 Utsav.png"
+import utsavAnalysis1 from "@/assets/Swarnali Portfolio Assets/Project 1 - Utsav/pdc analysis 1.png"
+import utsavAnalysis2 from "@/assets/Swarnali Portfolio Assets/Project 1 - Utsav/pdc analysis 2.png"
+import utsavAnalysis3 from "@/assets/Swarnali Portfolio Assets/Project 1 - Utsav/pdc analysis 3.png"
+import utsavAnalysis4 from "@/assets/Swarnali Portfolio Assets/Project 1 - Utsav/pdc analysis 4.png"
+
+import uomHero from "@/assets/Swarnali Portfolio Assets/Project 2 - Bicentenary Festival/uom project 2.png"
+import uomHeroAlt from "@/assets/Swarnali Portfolio Assets/Project 2 - Bicentenary Festival/uom project 2.1.png"
+import uomInsta from "@/assets/Swarnali Portfolio Assets/Project 2 - Bicentenary Festival/uom insta.png"
+import uomCopy1 from "@/assets/Swarnali Portfolio Assets/Project 2 - Bicentenary Festival/Copy 2.png"
+import uomCopy2 from "@/assets/Swarnali Portfolio Assets/Project 2 - Bicentenary Festival/copy 3.png"
+import uomBrianQuote from "@/assets/Swarnali Portfolio Assets/Project 2 - Bicentenary Festival/Brian Cox Copy.png"
+import uomBrianLecture from "@/assets/Swarnali Portfolio Assets/Project 2 - Bicentenary Festival/brian cox lecture pic.png"
+import uomFestivalOverview from "@/assets/Swarnali Portfolio Assets/Project 2 - Bicentenary Festival/Project 2 pic .png"
+
+import tbCreative1 from "@/assets/Swarnali Portfolio Assets/Project 3 - World TB Day/tb creative 1.png"
+import tbCreative2 from "@/assets/Swarnali Portfolio Assets/Project 3 - World TB Day/tb creative 2.png"
+import tbCreative3 from "@/assets/Swarnali Portfolio Assets/Project 3 - World TB Day/creative tb 3.png"
+import tbSummit from "@/assets/Swarnali Portfolio Assets/Project 3 - World TB Day/tb summit.png"
+import tbSummitPortrait from "@/assets/Swarnali Portfolio Assets/Project 3 - World TB Day/tb summit my pic.png"
+import tbPmPic from "@/assets/Swarnali Portfolio Assets/Project 3 - World TB Day/PM Modi pic.png"
+
+import iccrBulgaria from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr bulgaria.jpg"
+import iccrRomania from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr romania.jpg"
+import iccrTarguJiu from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr targiu-jiu romania.jpg"
+import iccrEvent from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr 1.png"
+import iccrCertificate from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr certificate.jpg"
+import iccrDelegate from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/about me pic 8.png"
+import iccrOfficial from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr official about me pic 7.png"
+import iccrLokSabha from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/lok sabha about me pic 6.png"
 
 export default function FeaturedProjects() {
   const projects = [
@@ -28,7 +62,15 @@ export default function FeaturedProjects() {
         { label: "Event Attendance", value: "Sold Out", icon: Award }
       ],
       tools: ["CapCut", "Canva", "Premiere Pro", "Google Analytics", "Instagram", "Facebook"],
-      color: "from-purple-500/10 to-pink-500/10"
+      color: "from-purple-500/10 to-pink-500/10",
+      images: [
+        { src: utsavPoster, alt: "Utsav festival poster design" },
+        { src: utsavPost, alt: "Social media post promoting Utsav" },
+        { src: utsavAnalysis1, alt: "Campaign analytics dashboard 1" },
+        { src: utsavAnalysis2, alt: "Campaign analytics dashboard 2" },
+        { src: utsavAnalysis3, alt: "Campaign analytics dashboard 3" },
+        { src: utsavAnalysis4, alt: "Campaign analytics dashboard 4" }
+      ]
     },
     {
       id: "bicentenary",
@@ -50,7 +92,17 @@ export default function FeaturedProjects() {
         { label: "Community Reach", value: "50,000+", icon: Award }
       ],
       tools: ["CMS", "R", "SAS", "Google Analytics", "SEO Tools", "Press Distribution"],
-      color: "from-blue-500/10 to-cyan-500/10"
+      color: "from-blue-500/10 to-cyan-500/10",
+      images: [
+        { src: uomHero, alt: "University of Manchester bicentenary hero graphic" },
+        { src: uomHeroAlt, alt: "Alternate bicentenary landing page graphic" },
+        { src: uomInsta, alt: "Instagram post announcing bicentenary festival" },
+        { src: uomCopy1, alt: "Festival copywriting sample highlighting events" },
+        { src: uomCopy2, alt: "Festival copywriting sample featuring student voices" },
+        { src: uomBrianQuote, alt: "Brian Cox quote graphic for bicentenary" },
+        { src: uomBrianLecture, alt: "Brian Cox lecture promotional design" },
+        { src: uomFestivalOverview, alt: "Bicentenary festival schedule overview" }
+      ]
     },
     {
       id: "tbmukt",
@@ -72,7 +124,15 @@ export default function FeaturedProjects() {
         { label: "Partner Organizations", value: "30+", icon: Award }
       ],
       tools: ["Figma", "SEO Tools", "Google Analytics", "Social Media Platforms", "PR Tools"],
-      color: "from-green-500/10 to-emerald-500/10"
+      color: "from-green-500/10 to-emerald-500/10",
+      images: [
+        { src: tbCreative1, alt: "TB Mukt Bharat awareness creative" },
+        { src: tbCreative2, alt: "TB Mukt Bharat educational creative" },
+        { src: tbCreative3, alt: "TB awareness statistics graphic" },
+        { src: tbSummit, alt: "World TB Day summit event visual" },
+        { src: tbSummitPortrait, alt: "At the World TB Day summit" },
+        { src: tbPmPic, alt: "Prime Minister at World TB Day summit" }
+      ]
     },
     {
       id: "iccr",
@@ -94,7 +154,17 @@ export default function FeaturedProjects() {
         { label: "Newsletter Open Rate", value: "42%", icon: TrendingUp }
       ],
       tools: ["Newsletter Platforms", "CMS", "Press Distribution", "Email Marketing", "Event Management"],
-      color: "from-orange-500/10 to-red-500/10"
+      color: "from-orange-500/10 to-red-500/10",
+      images: [
+        { src: iccrBulgaria, alt: "ICCR delegation in Bulgaria" },
+        { src: iccrRomania, alt: "Cultural outreach in Romania" },
+        { src: iccrTarguJiu, alt: "Delegation visit to Târgu Jiu, Romania" },
+        { src: iccrEvent, alt: "ICCR cultural event coordination" },
+        { src: iccrCertificate, alt: "ICCR international delegate certificate" },
+        { src: iccrDelegate, alt: "ICCR delegate portrait" },
+        { src: iccrOfficial, alt: "Official ICCR communications" },
+        { src: iccrLokSabha, alt: "Communications coverage at Lok Sabha" }
+      ]
     }
   ]
 
@@ -187,21 +257,26 @@ export default function FeaturedProjects() {
                     </CardContent>
                   </Card>
 
-                  {/* Placeholder for Creative Assets */}
                   <Card>
                     <CardHeader>
                       <CardTitle>Creative Assets</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="grid grid-cols-2 gap-3">
-                        {[1, 2, 3, 4].map((i) => (
-                          <div key={i} className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                            <span className="text-xs text-muted-foreground">Asset {i}</span>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {project.images.map((image, index) => (
+                          <div key={index} className="relative aspect-video overflow-hidden rounded-lg border border-muted">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                            />
                           </div>
                         ))}
                       </div>
                       <p className="text-xs text-muted-foreground mt-3 text-center">
-                        Campaign visuals, analytics, and content samples
+                        Campaign visuals, analytics, and content samples from each project
                       </p>
                     </CardContent>
                   </Card>

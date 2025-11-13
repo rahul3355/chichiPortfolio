@@ -1,5 +1,9 @@
+import Image from "next/image"
+
 import { Button } from "@/components/ui/button"
 import { Mail, Linkedin, Download } from "lucide-react"
+
+import profilePicture from "@/assets/Swarnali Portfolio Assets/profile picture.png"
 
 export default function Hero() {
   return (
@@ -7,8 +11,13 @@ export default function Hero() {
       <div className="max-w-4xl w-full text-center space-y-8">
         {/* Profile Image Placeholder */}
         <div className="flex justify-center mb-8">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 border-4 border-primary/20 flex items-center justify-center">
-            <span className="text-4xl font-bold text-primary">CP</span>
+          <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
+            <Image
+              src={profilePicture}
+              alt="Swarnali Chatterjee portrait"
+              className="w-full h-full object-cover"
+              priority
+            />
           </div>
         </div>
 

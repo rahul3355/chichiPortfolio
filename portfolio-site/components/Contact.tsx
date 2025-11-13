@@ -24,7 +24,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 px-4 bg-muted/30">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4 text-center">Let's Work Together</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center">Let&apos;s Work Together</h2>
         <Separator className="w-24 mx-auto mb-12" />
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -89,8 +89,8 @@ export default function Contact() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  I'm always interested in hearing about new opportunities, collaborations, and creative projects.
-                  Whether you need marketing strategy, communications support, or content creation, let's connect!
+                  I&apos;m always interested in hearing about new opportunities, collaborations, and creative projects.
+                  Whether you need marketing strategy, communications support, or content creation, let&apos;s connect!
                 </p>
 
                 <div className="space-y-3 pt-4">

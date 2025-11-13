@@ -1,18 +1,61 @@
+import Image from "next/image"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { FileText, Image as ImageIcon } from "lucide-react"
 
+import iccrBulgaria from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr bulgaria.jpg"
+import iccrRomania from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr romania.jpg"
+import iccrTarguJiu from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr targiu-jiu romania.jpg"
+import iccrCertificate from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr certificate.jpg"
+import iccrEvent from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/iccr 1.png"
+import iccrDelegate from "@/assets/Swarnali Portfolio Assets/iccr cultural delegate/about me pic 8.png"
+
 export default function AdditionalWork() {
   const socialMediaDesigns = [
-    { title: "Cultural Event Promo", platform: "Instagram", type: "Carousel Post" },
-    { title: "Festival Announcement", platform: "Facebook", type: "Cover Design" },
-    { title: "Behind the Scenes", platform: "Instagram", type: "Story Series" },
-    { title: "Artist Spotlight", platform: "LinkedIn", type: "Featured Post" },
-    { title: "Campaign Teaser", platform: "Instagram", type: "Reel Thumbnail" },
-    { title: "Event Recap", platform: "Twitter", type: "Thread Graphics" },
-    { title: "Awareness Campaign", platform: "Instagram", type: "Educational Post" },
-    { title: "Press Release Visual", platform: "LinkedIn", type: "Article Banner" }
+    {
+      title: "International Delegation Highlights",
+      platform: "Instagram",
+      type: "Carousel Post",
+      image: iccrEvent,
+      alt: "ICCR delegation performing cultural showcase"
+    },
+    {
+      title: "Cultural Diplomacy in Bulgaria",
+      platform: "Facebook",
+      type: "Photo Story",
+      image: iccrBulgaria,
+      alt: "ICCR cultural event in Bulgaria"
+    },
+    {
+      title: "Romania Cultural Exchange",
+      platform: "LinkedIn",
+      type: "Impact Post",
+      image: iccrRomania,
+      alt: "ICCR team with Romanian partners"
+    },
+    {
+      title: "Delegate Certification Spotlight",
+      platform: "Instagram",
+      type: "Reel Thumbnail",
+      image: iccrCertificate,
+      alt: "International delegate certificate"
+    },
+    {
+      title: "Cultural Outreach Journey",
+      platform: "Instagram",
+      type: "Travel Series",
+      image: iccrTarguJiu,
+      alt: "ICCR outreach in Târgu Jiu, Romania"
+    },
+    {
+      title: "Meet the Cultural Delegate",
+      platform: "LinkedIn",
+      type: "Profile Feature",
+      image: iccrDelegate,
+      alt: "Portrait of ICCR cultural delegate"
+    }
   ]
 
   const writingSamples = [
@@ -53,11 +96,14 @@ export default function AdditionalWork() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {socialMediaDesigns.map((design, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="aspect-square bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 flex items-center justify-center">
-                    <div className="text-center p-4">
-                      <ImageIcon className="w-8 h-8 mx-auto mb-2 text-primary/50" />
-                      <p className="text-xs text-muted-foreground">Design Sample</p>
-                    </div>
+                  <div className="relative aspect-square">
+                    <Image
+                      src={design.image}
+                      alt={design.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 15vw"
+                    />
                   </div>
                   <CardContent className="p-3">
                     <p className="font-semibold text-sm mb-1">{design.title}</p>

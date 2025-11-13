@@ -1,5 +1,12 @@
+import Image from "next/image"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+
+import stagePhoto from "@/assets/Swarnali Portfolio Assets/About me pictures/stage pic - about me sec.jpg"
+import culturalEventPhoto from "@/assets/Swarnali Portfolio Assets/About me pictures/arohi post - pic 1 about me sec.png"
+import officialPortrait from "@/assets/Swarnali Portfolio Assets/About me pictures/iccr official about me pic 7.png"
+import speakingEngagementPhoto from "@/assets/Swarnali Portfolio Assets/About me pictures/lok sabha about me pic 6.png"
 
 export default function About() {
   const timeline = [
@@ -7,6 +14,13 @@ export default function About() {
     { year: "2023", role: "Communications Coordinator", org: "University of Manchester" },
     { year: "2021", role: "Marketing Executive", org: "The Visual House" },
     { year: "2019", role: "Communications Officer", org: "ICCR" },
+  ]
+
+  const aboutImages = [
+    { src: stagePhoto, alt: "Performing on stage during a cultural event" },
+    { src: culturalEventPhoto, alt: "Hosting Arohi cultural showcase" },
+    { src: officialPortrait, alt: "Official portrait as ICCR representative" },
+    { src: speakingEngagementPhoto, alt: "Speaking at Lok Sabha event" }
   ]
 
   return (
@@ -61,6 +75,17 @@ export default function About() {
                   <span><strong>Stakeholder Coordination:</strong> Managing teams, vendors, and cross-functional projects seamlessly</span>
                 </li>
               </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">In Action</h3>
+              <div className="grid grid-cols-2 gap-4">
+                {aboutImages.map((image, index) => (
+                  <div key={index} className="relative aspect-square overflow-hidden rounded-lg shadow-sm">
+                    <Image src={image.src} alt={image.alt} className="object-cover" fill sizes="(max-width: 768px) 50vw, 33vw" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
