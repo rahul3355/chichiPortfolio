@@ -61,28 +61,45 @@ export default function AdditionalWork() {
 
   const writingSamples = [
     {
-      title: "Utsav 2025 Press Release",
+      title:
+        "The Private Travels to India of Heirs of the Belgium Throne – ICCR Press Release",
       type: "Press Release",
-      description: "Official announcement for Pagrav Dance Company's 20th anniversary celebration",
-      excerpt: "Multi-platform campaign launch announcement distributed to 50+ cultural media outlets...",
-      href: "/press-releases/utsav-2025-press-release.pdf",
-      actionLabel: "Download Press Release"
+      description:
+        "ICCR supported the Embassy of Belgium in printing a commemorative book documenting over a century of royal visits and cultural ties between India and Belgium.",
+      excerpt:
+        "Highlights shared democratic values, historic diplomatic bonds, and author Philippe Falisse's long association with Indian culture.",
+      href: "/documents/BELGIUM%20PRESS%20RELEASE%20Post%20event_0.pdf",
+      actionLabel: "Read Press Release"
     },
     {
-      title: "TB Mukt Bharat Blog Series",
-      type: "Blog Content",
-      description: "Educational content series on tuberculosis prevention and awareness",
-      excerpt: "SEO-optimized articles combining public health information with compelling storytelling...",
-      href: "/press-releases/tb-mukt-bharat-blog-series.pdf",
-      actionLabel: "Read Blog Sample"
+      title: "ICCR Cultural Evening – 3rd Batch of Gen-Next Delegates",
+      type: "Press Release",
+      description:
+        "Coverage of a cultural evening in New Delhi showcasing Indian dance forms for Gen-Next Democracy Network delegates from six countries.",
+      excerpt:
+        "Captures programme highlights, international participation, and dignitaries attending the Azadi ka Amrit Mahotsav celebration.",
+      href: "/documents/Revised%20Press%20Release-%20Gen%20Next.pdf",
+      actionLabel: "View Event Release"
     },
     {
-      title: "Cultural Festival Newsletter",
-      type: "Email Marketing",
-      description: "Monthly newsletter to 3,000+ international stakeholders",
-      excerpt: "Engaging digest of cultural events, artist features, and program highlights...",
-      href: "/press-releases/cultural-festival-newsletter.pdf",
-      actionLabel: "Preview Newsletter"
+      title: "Unveiling Soft Power: Ambitions and Limitations of Indian Cultural Diplomacy in the UK",
+      type: "Dissertation",
+      description:
+        "Master's dissertation evaluating how India advances cultural diplomacy in the UK through institutions, collaborations, and policy initiatives.",
+      excerpt:
+        "Assesses the strengths of India's soft power outreach, structural gaps, and the real-world impact on public perception.",
+      href: "/documents/Dissertation%20Unveiling%20Soft%20Power.pdf",
+      actionLabel: "Read Dissertation"
+    },
+    {
+      title: "HOME Manchester – Case Study on Diversity and Inclusivity",
+      type: "Case Study",
+      description:
+        "Group research analysing HOME Manchester's approach to diversity and inclusion across programming, audiences, staffing, and community work.",
+      excerpt:
+        "Maps organisational strengths, identifies areas for growth, and benchmarks progress against sector-wide practices.",
+      href: "/documents/HOME%20theatre%20Manchester%20Project.pdf",
+      actionLabel: "Read Case Study"
     }
   ]
 
