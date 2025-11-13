@@ -68,7 +68,7 @@ export default function AdditionalWork() {
         "ICCR supported the Embassy of Belgium in printing a commemorative book documenting over a century of royal visits and cultural ties between India and Belgium.",
       excerpt:
         "Highlights shared democratic values, historic diplomatic bonds, and author Philippe Falisse's long association with Indian culture.",
-      href: "/documents/BELGIUM%20PRESS%20RELEASE%20Post%20event_0.pdf",
+      href: "https://drive.google.com/file/d/1H5_wgWOlzqVwGYa2c_5k8S3146HORw1x/view?usp=sharing",
       actionLabel: "Read Press Release"
     },
     {
@@ -78,7 +78,7 @@ export default function AdditionalWork() {
         "Coverage of a cultural evening in New Delhi showcasing Indian dance forms for Gen-Next Democracy Network delegates from six countries.",
       excerpt:
         "Captures programme highlights, international participation, and dignitaries attending the Azadi ka Amrit Mahotsav celebration.",
-      href: "/documents/Revised%20Press%20Release-%20Gen%20Next.pdf",
+      href: "https://drive.google.com/file/d/1_rMuGRebg9qqtN-nlfODrYx-PCBm3B1L/view?usp=sharing",
       actionLabel: "View Event Release"
     },
     {
@@ -88,7 +88,7 @@ export default function AdditionalWork() {
         "Master's dissertation evaluating how India advances cultural diplomacy in the UK through institutions, collaborations, and policy initiatives.",
       excerpt:
         "Assesses the strengths of India's soft power outreach, structural gaps, and the real-world impact on public perception.",
-      href: "/documents/Dissertation%20Unveiling%20Soft%20Power.pdf",
+      href: "https://drive.google.com/file/d/1ATOkI5B0dZ9ntLlvYdpomDD3wLXUMLI9/view?usp=sharing",
       actionLabel: "Read Dissertation"
     },
     {
@@ -98,7 +98,7 @@ export default function AdditionalWork() {
         "Group research analysing HOME Manchester's approach to diversity and inclusion across programming, audiences, staffing, and community work.",
       excerpt:
         "Maps organisational strengths, identifies areas for growth, and benchmarks progress against sector-wide practices.",
-      href: "/documents/HOME%20theatre%20Manchester%20Project.pdf",
+      href: "https://drive.google.com/file/d/1Ue35ASsrId5Q_2wjIUe6IkvwZbdtY4_f/view?usp=sharing",
       actionLabel: "Read Case Study"
     }
   ]
