@@ -2,24 +2,57 @@
 
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { Mail, Linkedin, MapPin, Send } from "lucide-react"
+import { Check, Copy, Linkedin, Mail, MapPin } from "lucide-react"
+
+const emailAddress = "swarnalinag997@gmail.com"
+
+function EmailContactCard() {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(emailAddress)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      setCopied(false)
+    }
+  }
+
+  return (
+    <Card className="border-primary/30">
+      <CardHeader>
+        <CardTitle>Email Me Directly</CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <p className="text-muted-foreground text-sm">
+          Prefer emailing? Reach out anytime using the address below. It&apos;s my quickest response channel for new
+          projects and collaborations.
+        </p>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="flex items-center justify-between gap-3 rounded-lg border bg-background px-4 py-2 sm:justify-start">
+            <Mail className="w-5 h-5 text-primary" />
+            <span className="font-medium text-sm sm:text-base break-all">{emailAddress}</span>
+          </div>
+          <Button onClick={handleCopy} variant="secondary" className="gap-2 w-full sm:w-auto">
+            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            {copied ? "Copied" : "Copy email"}
+          </Button>
+        </div>
+        <Button asChild className="w-full sm:w-auto gap-2">
+          <a href={`mailto:${emailAddress}`}>
+            <Mail className="w-4 h-4" />
+            Compose email
+          </a>
+        </Button>
+      </CardContent>
+    </Card>
+  )
+}
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-  }
 
   return (
     <section id="contact" className="py-20 px-4 bg-muted/30">
@@ -28,58 +61,9 @@ export default function Contact() {
         <Separator className="w-24 mx-auto mb-12" />
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {/* Contact Form */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="text-sm font-medium mb-2 block">
-                    Name
-                  </label>
-                  <Input
-                    id="name"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="text-sm font-medium mb-2 block">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="your.email@example.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="text-sm font-medium mb-2 block">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell me about your project..."
-                    rows={5}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                  />
-                </div>
-                <Button type="submit" className="w-full gap-2">
-                  <Send className="w-4 h-4" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+          <div className="space-y-6">
+            <EmailContactCard />
+          </div>
 
           {/* Contact Information */}
           <div className="space-y-6">
@@ -95,18 +79,18 @@ export default function Contact() {
 
                 <div className="space-y-3 pt-4">
                   <a
-                    href="mailto:contact@example.com"
+                    href={`mailto:${emailAddress}`}
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors"
                   >
                     <Mail className="w-5 h-5 text-primary" />
                     <div>
                       <div className="font-medium">Email</div>
-                      <div className="text-sm text-muted-foreground">contact@example.com</div>
+                      <div className="text-sm text-muted-foreground">{emailAddress}</div>
                     </div>
                   </a>
 
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/swarnali-nag"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors"
@@ -163,17 +147,22 @@ export default function Contact() {
         <Separator className="mb-8" />
         <div className="text-center space-y-4">
           <div className="flex justify-center gap-6">
-            <Button variant="ghost" size="sm" className="gap-2">
-              <Mail className="w-4 h-4" />
-              Email
+            <Button asChild variant="ghost" size="sm" className="gap-2">
+              <a href={`mailto:${emailAddress}`} className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                Email
+              </a>
             </Button>
-            <Button variant="ghost" size="sm" className="gap-2">
-              <Linkedin className="w-4 h-4" />
-              LinkedIn
-            </Button>
-            <Button variant="ghost" size="sm" className="gap-2">
-              <Send className="w-4 h-4" />
-              Twitter
+            <Button asChild variant="ghost" size="sm" className="gap-2">
+              <a
+                href="https://www.linkedin.com/in/swarnali-nag"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">
